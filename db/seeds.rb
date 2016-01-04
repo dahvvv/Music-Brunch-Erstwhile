@@ -13,3 +13,19 @@ the_world_turned_upside_down = Album.create!({
 	image_path: '/images/album_covers/005_the_world_turned_upside_down.jpg',
 	year: 1999
 })
+
+Song.destroy_all()
+
+phase_two = Song.create!({
+	title: 'phase two',
+	album_id: the_world_turned_upside_down.id,
+	time_in_seconds: 2084,
+	track_num: 1
+})
+
+phase_one = Song.create!({
+	title: 'phase one',
+	album_id: the_world_turned_upside_down.id,
+	time_in_seconds: 1331,
+	track_num: 2
+})
