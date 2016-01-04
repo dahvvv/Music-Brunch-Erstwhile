@@ -1,4 +1,4 @@
 ActiveRecord::Base.establish_connection({
 	adapter: 'postgresql',
-	database: 'music-brunch-erstwhile',
+	database: 'music_brunch_erstwhile',
 })
