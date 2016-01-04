@@ -4,5 +4,9 @@ require_relative 'connection'
 Dir[Dir.pwd + '/models/*.rb'].each{ |file| require file }
 
 get '/' do
-	erb :index
+	redirect '/albums'
+end
+
+get '/albums' do
+	erb :'/albums/index'
 end
