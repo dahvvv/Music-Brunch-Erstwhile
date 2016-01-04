@@ -1,1 +1,3 @@
-albums index yall
+<% @albums.each do |album| %>
+	<img src="<%= album.image_path %>" alt="<%= album.title %>">
+<% end %>
