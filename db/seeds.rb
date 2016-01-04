@@ -11,7 +11,8 @@ the_world_turned_upside_down = Album.create!({
 	catalog_num: 'E005',
 	musicians: ['Keith Rowe', 'Günter Müller', 'Taku Sugimoto'],
 	image_path: '/images/album_covers/005_the_world_turned_upside_down.jpg',
-	year: 1999
+	year: 1999,
+	order: 1
 })
 
 Song.destroy_all()
