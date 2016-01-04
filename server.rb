@@ -8,5 +8,6 @@ get '/' do
 end
 
 get '/albums' do
+	@albums = Album.order(:order)
 	erb :'/albums/index'
 end
