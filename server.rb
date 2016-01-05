@@ -3,6 +3,10 @@ Bundler.require
 require_relative 'connection'
 Dir[Dir.pwd + '/models/*.rb'].each{ |file| require file }
 
+get '/*/styles.css' do
+	redirect 'stylesheets/styles.css'
+end
+
 get '/' do
 	redirect '/albums'
 end
