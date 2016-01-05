@@ -9,23 +9,23 @@ info = {
 	order: 5,
 	songs: [
 		{
-			title: '1',
+			title: '',
 			time_in_seconds: 1499,
 		},
 		{
-			title: '2',
+			title: '',
 			time_in_seconds: 1081,
 		},
 		{
-			title: '3',
+			title: '',
 			time_in_seconds: 206,
 		},
 		{
-			title: '4',
+			title: '',
 			time_in_seconds: 203,
 		},
 		{
-			title: '5',
+			title: '',
 			time_in_seconds: 95,
 		}
 	]
