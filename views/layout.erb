@@ -6,6 +6,12 @@
 </head>
 <body>
 	
+	<% @albums.each do |album| %>
+		<a href="/albums/<%= album.id %>">
+			<img src="<%= album.image_path %>" alt="<%= album.title %>">
+		</a>
+	<% end %>
+
 	<%= yield %>
 
 </body>
