@@ -1,3 +1,10 @@
 body {
-	background-color: lightblue;
+	background-color: peachpuff;
+}
+
+#albums {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	overflow-y: scroll;
 }
