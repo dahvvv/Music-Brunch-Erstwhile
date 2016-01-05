@@ -4,7 +4,7 @@
 <ul>
 	<% @songs.each do |song| %>
 		<li>
-			<%= song.track_num %>. <%= song.title %>  <%= song.time_in_seconds %>
+			<%= song.track_num %>. <%= song.title %>  <%= song.time %>
 		</li>
 	<% end %>
 </ul>
