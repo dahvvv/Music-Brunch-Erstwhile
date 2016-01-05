@@ -1,1 +1,6 @@
-<%= @album.title %>
+<h1><%= @album.title %></h1>
+<ul>
+	<% @songs.each do |song| %>
+		<li><%= song.title %></li>
+	<% end %>
+</ul>

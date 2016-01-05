@@ -19,5 +19,10 @@ end
 get '/albums/:id' do
 	@albums = Album.order(:order)
 	@album = Album.find(params[:id])
+	@songs = @album.songs
 	erb :'/albums/show'
+end
+
+get '/console' do
+	binding.pry
 end

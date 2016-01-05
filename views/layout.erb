@@ -7,7 +7,7 @@
 </head>
 <body>
 	
-	<% if @albums && @albums.length > 1 %>
+	<% if @albums && @albums.length > 0 %>
 		<div id="albums">
 			<% @albums.each do |album| %>
 				<a href="/albums/<%= album.id %>">
