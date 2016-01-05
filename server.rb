@@ -13,6 +13,7 @@ get '/albums' do
 end
 
 get '/albums/:id' do
+	@albums = Album.order(:order)
 	@album = Album.find(params[:id])
 	erb :'/albums/show'
 end
