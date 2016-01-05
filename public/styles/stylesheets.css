@@ -1,10 +1,17 @@
 body {
-	background-color: peachpuff;
+	background-color: rgba(255, 218, 185, 0.5);
 }
 
 #albums {
 	position: fixed;
-	width: 250px;
+	width: 120px;
 	height: 100%;
 	overflow-y: scroll;
+}
+
+.album {
+	width: 110px;
+	height: 110px;
+	margin: 2px;
+	border: 1px solid grey;
 }

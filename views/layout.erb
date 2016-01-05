@@ -11,7 +11,7 @@
 		<div id="albums">
 			<% @albums.each do |album| %>
 				<a href="/albums/<%= album.id %>">
-					<img src="<%= album.image_path %>" alt="<%= album.title %>">
+					<img src="<%= album.image_path %>" alt="<%= album.title %>" class="album">
 				</a>
 			<% end %>
 		</div>
