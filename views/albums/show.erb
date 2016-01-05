@@ -1,6 +1,10 @@
-<h1><%= @album.title %></h1>
+<h1><%= @album.musicians.join(' / ') %></h1>
+<img class="album" src="<%= @album.image_path %>" alt="<%= @album.title %>">
+<h1><%= @album.title %> (<%= @album.year %>)</h1>
 <ul>
 	<% @songs.each do |song| %>
-		<li><%= song.title %></li>
+		<li>
+			<%= song.track_num %>. <%= song.title %>  <%= song.time_in_seconds %>
+		</li>
 	<% end %>
 </ul>

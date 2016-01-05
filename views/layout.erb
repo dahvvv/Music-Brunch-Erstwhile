@@ -8,13 +8,13 @@
 <body>
 	
 	<% if @albums && @albums.length > 0 %>
-		<div id="albums">
+		<nav>
 			<% @albums.each do |album| %>
 				<a href="/albums/<%= album.id %>">
-					<img src="<%= album.image_path %>" alt="<%= album.title %>" class="album">
+					<img src="<%= album.image_path %>" alt="<%= album.title %>">
 				</a>
 			<% end %>
-		</div>
+		</nav>
 	<% end %>
 
 	<%= yield %>
