@@ -7,6 +7,10 @@ get '/*/styles.css' do
 	redirect 'stylesheets/styles.css'
 end
 
+get '/*/main.js' do
+	redirect 'js/main.js'
+end
+
 get '/' do
 	redirect '/albums'
 end
