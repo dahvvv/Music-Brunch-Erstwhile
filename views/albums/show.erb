@@ -1,6 +1,6 @@
-<h1><%= @album.musicians.join(' / ') %></h1>
-<img class="album" src="<%= @album.image_path %>" alt="<%= @album.title %>">
 <h1><%= @album.title %> (<%= @album.year %>)</h1>
+<img class="album" src="<%= @album.image_path %>" alt="<%= @album.title %>">
+<h2><%= @album.musicians.join(' / ') %></h2>
 <ul>
 	<% @songs.each do |song| %>
 		<li>
@@ -8,3 +8,6 @@
 		</li>
 	<% end %>
 </ul>
+<% @album.sample_paths.each do |sample_path| %>
+	<audio src="<%= sample_path %>" controls></audio>
+<% end %>
