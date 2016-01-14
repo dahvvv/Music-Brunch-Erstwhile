@@ -16,6 +16,7 @@ Song.destroy_all()
 		catalog_num: album_info[:catalog_num],
 		musicians: album_info[:musicians],
 		image_path: album_info[:image_path],
+		sample_paths: album_info[:sample_paths],
 		year: album_info[:year],
 		order: album_info[:order]
 		})

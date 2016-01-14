@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104161535) do
+ActiveRecord::Schema.define(version: 20160114164721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
     t.text     "title"
-    t.text     "musicians",   array: true
+    t.text     "musicians",    array: true
     t.text     "image_path"
     t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "catalog_num"
     t.integer  "order"
+    t.text     "sample_paths", array: true
   end
 
   create_table "songs", force: :cascade do |t|

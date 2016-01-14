@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E006',
 	musicians: ['Kevin Drumm', 'Martin Tètrault'],
 	image_path: '/images/album_covers/006_particles_and_smears.jpg',
+	sample_paths: ['/audio/006_audio.wav'],
 	year: 1999,
 	order: 2,
 	songs: [
