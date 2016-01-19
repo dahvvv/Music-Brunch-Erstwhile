@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E019',
 	musicians: ['Greg Kelley', 'Jason Lescalleet'],
 	image_path: '/images/album_covers/019_forlorn_green.jpg',
+	sample_paths: ['/audio/019_audio.wav'],
 	year: 2001,
 	order: 6,
 	songs: [

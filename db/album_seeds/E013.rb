@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E013',
 	musicians: ['Sachiko M', 'Toshimaru Nakamura'],
 	image_path: '/images/album_covers/013_do.jpg',
+	sample_paths: ['/audio/013_audio.wav', '/audio/013_audio2.wav'],
 	year: 2000,
 	order: 3,
 	songs: [

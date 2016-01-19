@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E015',
 	musicians: ['Axel Dörner', 'Kevin Drumm'],
 	image_path: '/images/album_covers/015_axel_dörner_and_kevin_drumm.jpg',
+	sample_paths: ['/audio/015_audio.wav'],
 	year: 2001,
 	order: 5,
 	songs: [

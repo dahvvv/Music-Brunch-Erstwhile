@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E021',
 	musicians: ['MIMEO', 'John Tilbury'],
 	image_path: '/images/album_covers/021_the_hands_of_caravaggio.jpg',
+	sample_paths: ['/audio/021_audio.wav', '/audio/021_audio2.wav'],
 	year: 2002,
 	order: 7,
 	songs: [
