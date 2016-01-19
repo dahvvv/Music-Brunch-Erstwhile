@@ -9,5 +9,5 @@
 	<% end %>
 </ul>
 <% @album.sample_paths.each do |sample_path| %>
-	<audio src="<%= sample_path %>" controls></audio>
+	<audio src="<%= sample_path %>" controls preload="auto"></audio>
 <% end %>
