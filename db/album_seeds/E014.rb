@@ -5,7 +5,7 @@ info = {
 	catalog_num: 'E014',
 	musicians: ['Phil Durrant', 'Thomas Lehn', 'Radu Malfatti'],
 	image_path: '/images/album_covers/014_dach.jpg',
-	sample_paths: ['/audio/014_audio.wav', '/audio/014_audio2.wav', '/audio/014_audio3.wav'],
+	sample_paths: ['/audio/014_audio3.wav'],
 	year: 2000,
 	order: 4,
 	songs: [
