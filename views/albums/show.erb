@@ -1,6 +1,6 @@
 <h1><%= @album.title %> (<%= @album.year %>)</h1>
-<img class="album" src="<%= @album.image_path %>" alt="<%= @album.title %>">
 <h2><%= @album.musicians.join(' / ') %></h2>
+<img class="album" src="<%= @album.image_path %>" alt="<%= @album.title %>">
 <ul>
 	<% @songs.each do |song| %>
 		<li>
