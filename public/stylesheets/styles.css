@@ -1,5 +1,5 @@
 body {
-	background-color: rgba(255, 218, 185, 0.2);
+	background-color: white;
 	text-align: center;
 	margin: 0;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -36,4 +36,5 @@ li {
 .album {
 	width: 250px;
 	height: 250px;
+	border: 1px solid black;
 }
