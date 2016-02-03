@@ -55,4 +55,5 @@ audio {
 #play-pause {
 	width: 100px;
 	margin: 40px;
+	cursor: pointer;
 }
