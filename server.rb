@@ -24,7 +24,11 @@ get '/albums/:id' do
 	@albums = Album.order(:order)
 	@album = Album.find(params[:id])
 	@songs = @album.songs
-	erb :'/albums/show'
+	erb_string = erb :'/albums/show'
+	{
+		src: @album.sample_paths[0],
+		show: erb_string
+	}.to_json
 end
 
 get '/console' do
