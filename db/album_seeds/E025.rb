@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E025',
 	musicians: ['Burkhard Stangl', 'Dieb13'],
 	image_path: '/images/album_covers/025_eh.jpg',
+	sample_paths: ['/audio/025_audio.wav'],
 	year: 2002,
 	order: 9,
 	songs: [

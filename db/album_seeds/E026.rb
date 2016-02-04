@@ -31,4 +31,4 @@ info = {
 	]
 }
 
-@album_seeds << info
+# @album_seeds << info

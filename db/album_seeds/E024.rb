@@ -5,7 +5,7 @@ info = {
 	catalog_num: 'E024',
 	musicians: ['Cosmos'],
 	image_path: '/images/album_covers/024_tears.jpg',
-	sample_paths: ['/audio/024_audio.wav', '/audio/021_audio2.wav'],
+	sample_paths: ['/audio/024_audio.wav', '/audio/024_audio2.wav'],
 	year: 2002,
 	order: 8,
 	songs: [
