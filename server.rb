@@ -29,6 +29,7 @@ get '/albums/:id' do
 		src: @album.sample_paths[0],
 		show: erb_string
 	}.to_json
+	# redirect '/albums'
 end
 
 get '/console' do
