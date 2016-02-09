@@ -5,6 +5,7 @@ info = {
 	catalog_num: 'E042',
 	musicians: ['Sachiko M', 'Toshimaru Nakamura', 'Otomo Yoshihide'],
 	image_path: '/images/album_covers/042_good_morning_good_night.jpg',
+	sample_paths: ['/audio/042_audio.wav','/audio/042_audio2a.wav','/audio/042_audio2b.wav'],
 	year: 2004,
 	order: 13,
 	songs: [
