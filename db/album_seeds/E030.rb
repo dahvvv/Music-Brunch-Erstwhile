@@ -5,7 +5,7 @@ info = {
 	catalog_num: 'E030',
 	musicians: ['Keith Rowe', 'John Tilbury'],
 	image_path: '/images/album_covers/030_duos_for_doris.jpg',
-	sample_paths: ['/audio/030_audio.wav'],
+	sample_paths: ['/audio/030_audio.wav','/audio/030_audio2.wav'],
 	year: 2003,
 	order: 11,
 	songs: [
