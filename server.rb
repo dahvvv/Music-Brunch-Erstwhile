@@ -26,7 +26,7 @@ get '/albums/:id' do
 	@songs = @album.songs
 	erb_string = erb :'/albums/show'
 	{
-		src: @album.sample_paths[0],
+		src: @album.sample_paths[params[:sampleIdx].to_i],
 		show: erb_string
 	}.to_json
 	# redirect '/albums'
