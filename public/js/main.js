@@ -4,38 +4,53 @@ document.addEventListener("DOMContentLoaded", function(){
 		main: document.getElementById("main"),
 		nav: document.getElementsByTagName("nav")[0],
 		audio: document.getElementsByTagName("audio")[0],
-		playPause: document.getElementById("play-pause")
+		playPause: document.getElementById("play-pause"),
+		sample2: document.querySelector("#play-bar div:last-child")
 	};
 
-	function setAjax() {
+	dom.destroyAudio = function(){
+		this.audio.pause();
+		this.audio.setAttribute("src", "");
+		this.audio.load();
+		this.audio.parentNode.removeChild(this.audio);
+		this.audio = null;
+	};
+
+	dom.createAudio = function(src){
+		this.audio = document.createElement("audio");
+		this.audio.preload = "metadata";
+		this.audio.setAttribute("src", src);
+		this.audio.load();
+		document.body.appendChild(this.audio);
+	};
+
+	function setAjax(sampleIdx) {
+		sampleIdx = sampleIdx || 0;
 		var request = new XMLHttpRequest();
 		request.onreadystatechange = function() {
 			if (request.readyState == 4 && request.status == 200) {
 				var res = JSON.parse(request.response);
-				dom.audio.setAttribute("src", "");
-				dom.audio.load();
-				dom.audio.parentNode.removeChild(dom.audio);
-				dom.audio = document.createElement("audio");
-				dom.audio.preload = "metadata";
-				dom.audio.setAttribute("src", res.src);
-				dom.audio.load();
+				dom.destroyAudio();
+				dom.createAudio(res.src);
+
 				dom.audio.addEventListener("playing", function(){
 					dom.playPause.setAttribute("src", "/images/pause.png")
 				});
 				dom.audio.addEventListener("pause", function(){
 					dom.playPause.setAttribute("src", "/images/play.png")
 				});
-				document.body.appendChild(dom.audio);
+				
 				dom.main.innerHTML = res.show;
+
 				history.pushState({mainHTML:res.show},"",dom.link.pathname);
 				window.onpopstate = function(e) {
-					dom.audio.set
 					var initHTML = "<h1>Erstwhile Records</h1>";
 					dom.main.innerHTML = e.state ? e.state.mainHTML : initHTML;
 				};
 			}
 		};
-		request.open("GET", dom.link.pathname);
+
+		request.open("GET", dom.link.pathname + "?sampleIdx=" + sampleIdx);
 		request.send(null);
 	}
 
@@ -44,12 +59,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	dom.nav.addEventListener("click", function(e){
 		e.preventDefault();
-		dom.audio.pause();
 		dom.link = e.target;
 		while (dom.link.tagName != "A" && dom.link.tagName != "HTML"){
 			dom.link = dom.link.parentNode;
 		}
 		setAjax();
+	});
+
+	// clicking the '2' button makes an ajax call with the sample set to 2
+	dom.sample2.addEventListener("click", function(){
+		setAjax(1);
 	});
 
 	// toggle btw play and pause:
