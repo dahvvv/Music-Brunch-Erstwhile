@@ -52,6 +52,25 @@ audio {
 	display: none;
 }
 
+#play-bar {
+	position: relative;
+}
+
+#play-bar div {
+	display: inline-block;
+	position: absolute;
+	border: 5px solid blue;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 50%;
+	top: 25%;
+	width: 85px;
+}
+
+#play-bar div:first-child {
+	left: 40%;
+}
+
 #play-pause {
 	width: 85px;
 	margin: 40px;
