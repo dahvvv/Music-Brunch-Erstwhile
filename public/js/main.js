@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	var dom = {
 		main: document.getElementById("main"),
 		nav: document.getElementsByTagName("nav")[0],
+		rendered: document.getElementById("rendered"),
 		audio: document.getElementsByTagName("audio")[0],
 		playPause: document.getElementById("play-pause"),
 		sample2: document.querySelector("#play-bar div:last-child")
@@ -40,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function(){
 					dom.playPause.setAttribute("src", "/images/play.png")
 				});
 				
-				dom.main.innerHTML = res.show;
+				dom.rendered.innerHTML = res.show;
 
 				history.pushState({mainHTML:res.show},"",dom.link.pathname);
 				window.onpopstate = function(e) {
 					var initHTML = "<h1>Erstwhile Records</h1>";
-					dom.main.innerHTML = e.state ? e.state.mainHTML : initHTML;
+					dom.rendered.innerHTML = e.state ? e.state.mainHTML : initHTML;
 				};
 			}
 		};
@@ -56,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	// set navbar height to screen height:
 	dom.nav.style.height = window.innerHeight + "px";
+
+	// set main width to 100% minus navbar:
+	dom.main.style.width = window.innerWidth - dom.nav.offsetWidth - 5 + "px";
 
 	dom.nav.addEventListener("click", function(e){
 		e.preventDefault();
