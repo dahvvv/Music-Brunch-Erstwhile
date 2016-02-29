@@ -12,19 +12,19 @@ get '/*/main.js' do
 end
 
 get '/' do
-	redirect '/albums'
+	redirect '/erstwhile/albums'
 end
 
-get '/albums' do
+get '/erstwhile/albums' do
 	@albums = Album.order(:order)
-	erb :'/albums/index'
+	erb :'/erstwhile/albums/index'
 end
 
-get '/albums/:id' do
+get '/erstwhile/albums/:id' do
 	@albums = Album.order(:order)
 	@album = Album.find(params[:id])
 	@songs = @album.songs
-	erb_string = erb :'/albums/show'
+	erb_string = erb :'/erstwhile/albums/show'
 	{
 		src: @album.sample_paths[params[:sampleIdx].to_i],
 		show: erb_string

@@ -11,7 +11,7 @@
 	<% if @albums && @albums.length > 0 %>
 		<nav>
 			<% @albums.each do |album| %>
-				<a href="/albums/<%= album.id %>">
+				<a href="/erstwhile/albums/<%= album.id %>">
 					<img src="<%= album.image_path %>" alt="<%= album.title %>">
 				</a>
 			<% end %>
