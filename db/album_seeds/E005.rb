@@ -5,7 +5,7 @@ info = {
 	catalog_num: 'E005',
 	musicians: ['Keith Rowe', 'Günter Müller', 'Taku Sugimoto'],
 	image_path: '/images/album_covers/005_the_world_turned_upside_down.jpg',
-	sample_paths: ['/audio/005_audio.wav', '/audio/005_audio2.wav'],
+	sample_paths: ['/audio/005_audio.m4a', '/audio/005_audio2.wav'],
 	year: 1999,
 	order: 1,
 	songs: [
