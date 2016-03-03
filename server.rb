@@ -3,12 +3,24 @@ Bundler.require
 require_relative 'connection'
 Dir[Dir.pwd + '/models/*.rb'].each{ |file| require file }
 
+before do
+	cache_control :no_store
+end
+
 get '/*/styles.css' do
 	redirect 'stylesheets/styles.css'
 end
 
 get '/*/main.js' do
 	redirect 'js/main.js'
+end
+
+get '/audio/*' do
+	binding.pry
+	puts "YO!!!!!"
+	mime_type :mp4, 'audio/mp4'
+	binding.pry
+	request.url
 end
 
 get '/' do

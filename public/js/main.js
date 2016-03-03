@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function(){
 		this.audio = document.createElement("audio");
 		this.audio.preload = "metadata";
 		this.audio.setAttribute("src", src);
+		if (src.substring(src.length - 3) == "m4a") {
+			this.audio.setAttribute("type", "audio/aac");
+		}
 		this.audio.load();
 		document.body.appendChild(this.audio);
 	};
@@ -31,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		request.onreadystatechange = function() {
 			if (request.readyState == 4 && request.status == 200) {
 				var res = JSON.parse(request.response);
+
 				dom.destroyAudio();
 				dom.createAudio(res.src);
 
